@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "491501411131",
+    "project_id": "bazaar-8f049",
+    "storage_bucket": "bazaar-8f049.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:491501411131:android:e4ba0c8585d5b32e90751e",
+        "android_client_info": {
+          "package_name": "com.example.bazzar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "491501411131-s6riu2itonofrogqirtm8egfil4ehjuu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlbDX0ctGz5R618H_Uk-X_AsjAbRci7Wk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "491501411131-s6riu2itonofrogqirtm8egfil4ehjuu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
