@@ -1,5 +1,5 @@
 import 'package:bazzar/cubit/cubit.dart';
-import 'package:bazzar/shared/themes.dart';
+import 'package:bazzar/style/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/cubit.dart';
 import '../cubit/state.dart';
 import '../layout/categories_layout.dart';
-import '../shared/component.dart';
-import '../shared/themes.dart';
+import '../shared/component/component.dart';
+import '../style/themes.dart';
 import 'about_app.dart';
 
 class Home extends StatelessWidget {

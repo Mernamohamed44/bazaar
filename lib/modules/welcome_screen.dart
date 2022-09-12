@@ -1,7 +1,7 @@
 import 'package:bazzar/layout/home_layout.dart';
 import 'package:bazzar/modules/signin_screen.dart';
-import 'package:bazzar/shared/themes.dart';
-import 'package:bazzar/shared/component.dart';
+import 'package:bazzar/style/themes.dart';
+import 'package:bazzar/shared/component/component.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

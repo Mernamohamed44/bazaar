@@ -5,8 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubit/state.dart';
 import '../layout/home_layout.dart';
-import '../shared/themes.dart';
-import '../shared/component.dart';
+import '../style/themes.dart';
+import '../shared/component/component.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({Key? key}) : super(key: key);

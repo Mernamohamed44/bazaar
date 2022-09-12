@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../shared/themes.dart';
+import '../style/themes.dart';
 
 class AboutApp extends StatelessWidget {
   const AboutApp({Key? key}) : super(key: key);
@@ -14,10 +14,19 @@ class AboutApp extends StatelessWidget {
     onPressed:() => Navigator.pop(context)),
           backgroundColor: CommonMethod().themeData.appBarTheme.backgroundColor,
         title:  Text('About App',style: CommonMethod().themeData.textTheme.bodyText1),),
-      body: Center(child: Padding(
+      body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Text('Bazaar is the app behind the scenes online store where people can get all essential product',style: CommonMethod().themeData.textTheme.bodyText1),
-      )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Bazaar is the app behind the scenes online store where people can get all essential product',style: CommonMethod().themeData.textTheme.bodyText1)
+            ,SizedBox(height: 10,),
+            Text('Project made by : Merna Mohamed Elseady',style: CommonMethod().themeData.textTheme.bodyText1?.copyWith(
+              fontSize: 13
+            ))
+          ],
+        ),
+      ),
     );
   }
 }

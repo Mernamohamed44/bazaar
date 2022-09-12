@@ -1,13 +1,13 @@
 import 'package:bazzar/cubit/state.dart';
 import 'package:bazzar/models/users_model.dart';
-import 'package:bazzar/shared/themes.dart';
+import 'package:bazzar/style/themes.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../cubit/cubit.dart';
-import '../shared/component.dart';
+import '../shared/component/component.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);

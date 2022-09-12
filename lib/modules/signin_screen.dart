@@ -2,12 +2,12 @@ import 'package:bazzar/cubit/cubit.dart';
 import 'package:bazzar/cubit/state.dart';
 import 'package:bazzar/layout/home_layout.dart';
 import 'package:bazzar/modules/signup_screen.dart';
-import 'package:bazzar/shared/themes.dart';
+import 'package:bazzar/style/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../shared/component.dart';
+import '../shared/component/component.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({Key? key}) : super(key: key);

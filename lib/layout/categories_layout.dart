@@ -1,11 +1,11 @@
 import 'package:bazzar/cubit/cubit.dart';
-import 'package:bazzar/shared/component.dart';
+import 'package:bazzar/shared/component/component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../cubit/state.dart';
-import '../shared/themes.dart';
+import '../style/themes.dart';
 
 class CategoriesScreen extends StatefulWidget {
  const CategoriesScreen({Key? key}) : super(key: key);
