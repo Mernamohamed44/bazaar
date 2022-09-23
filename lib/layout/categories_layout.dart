@@ -2,7 +2,6 @@ import 'package:bazzar/cubit/cubit.dart';
 import 'package:bazzar/shared/component/component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../cubit/state.dart';
 import '../style/themes.dart';
@@ -75,7 +74,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                        ),
                        onPressed: () {},
                      ),
-                     SizedBox(
+                     const SizedBox(
                        width: 230,
                      ),
                      IconButton(
@@ -86,7 +85,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                  ),
                  Text('All Categories',
                      style: CommonMethod().themeData.textTheme.bodyText1),
-                 SizedBox(
+                 const SizedBox(
                    height: 20,
                  ),
                 Expanded(
@@ -98,15 +97,15 @@ class _CategoriesScreenState extends State<CategoriesScreen> {
                           Expanded(
                             child: ListView.separated(
                                 itemBuilder:(context,index)=> buildContainerCate(catPhotos[index],catName[index]),
-                                separatorBuilder:  (context,index)=>SizedBox(height: 10,),
+                                separatorBuilder:  (context,index)=>const SizedBox(height: 10,),
                                 itemCount:4),),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Expanded(
                             child: ListView.separated(
                                 itemBuilder:(context,index)=> buildContainerCate(catPhotos[index+4],catName[index+4]),
-                                separatorBuilder:  (context,index)=>SizedBox(height: 10,),
+                                separatorBuilder:  (context,index)=>const SizedBox(height: 10,),
                                 itemCount:3),),
                         ],
                       ),

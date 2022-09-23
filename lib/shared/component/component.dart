@@ -20,7 +20,7 @@ Widget buildButton(String txt, color, txtColor, fun,height,width) {
     ),
   );
 }
- void navigateTo(context, w){
+ void navigateTo(context,w){
     Navigator.push(context,MaterialPageRoute(
         builder: (context){
       return w;

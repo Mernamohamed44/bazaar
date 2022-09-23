@@ -1,10 +1,10 @@
 import 'package:bazzar/cubit/state.dart';
-import 'package:bazzar/models/users_model.dart';
+
 import 'package:bazzar/style/themes.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 import '../cubit/cubit.dart';
 import '../shared/component/component.dart';
@@ -20,7 +20,6 @@ class AccountScreen extends StatelessWidget {
         listener: (context,state)=>{},
         builder: (context,state){
           var userModel=BazaarCubit.get(context).userModel;
-          print(userModel?.email);
           return Scaffold(
               backgroundColor: CommonMethod().themeData.primaryColor,
               body: SafeArea(
@@ -41,7 +40,7 @@ class AccountScreen extends StatelessWidget {
                                 backgroundImage: NetworkImage('${userModel?.image}'),
                                 radius:30 ,
                               ),
-                              SizedBox(width: 15,),
+                              const SizedBox(width: 15,),
                               Column(
                                 children: [
                                   Text('${userModel?.name}',style:CommonMethod().themeData.textTheme.bodyText2?.copyWith(
@@ -55,18 +54,18 @@ class AccountScreen extends StatelessWidget {
                                   ) ),
                                 ],
                               ),
-                              SizedBox(width: 90,),
-                              CircleAvatar(
+                              const SizedBox(width: 90,),
+                              const CircleAvatar(
                                 backgroundColor: Colors.white70,
                                 radius: 18,
                                 child:Icon(Icons.mode_edit_outlined),)
                             ],
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(height: 10,),
                           Container(
                             width: 370,
                             height: 270,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.all(Radius.circular(30))
                             ),
                             child: Card(
@@ -89,7 +88,7 @@ class AccountScreen extends StatelessWidget {
                           Container(
                             width: 370,
                             height: 270,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.all(Radius.circular(30))
                             ),
                             child: Card(
@@ -112,7 +111,7 @@ class AccountScreen extends StatelessWidget {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.logout_outlined),
+                              const Icon(Icons.logout_outlined),
                               Text('LogOut',style:CommonMethod().themeData.textTheme.bodyText1 ,)
                             ],
                           )

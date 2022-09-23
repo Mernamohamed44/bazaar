@@ -49,7 +49,7 @@ class Home extends StatelessWidget {
                  actions: [
                    IconButton(onPressed: (){}, icon:Icon(Icons.notifications_none_outlined,color: Colors.grey.withOpacity(.5),size: 30)),
                    IconButton(onPressed: (){
-                     navigateTo(context, AboutApp());
+                     navigateTo(context, const AboutApp());
                    }, icon:Icon(Icons.info_outline,color: Colors.grey.withOpacity(.5),size: 30)),
                  ],
                ),
@@ -57,11 +57,11 @@ class Home extends StatelessWidget {
                  child: Column(
                    children: [
                      buildFirstWeigt(),
-                     SizedBox(
+                     const SizedBox(
                        height: 15,
                      ),
                      Container(
-                       padding: EdgeInsets.only(left: 8),
+                       padding: const EdgeInsets.only(left: 8),
                        width: 400,
                        height: 270,
                        color: Colors.white,
@@ -73,7 +73,7 @@ class Home extends StatelessWidget {
                                Text('Exclusive deals',
                                    style:
                                    CommonMethod().themeData.textTheme.bodyText1),
-                               SizedBox(
+                               const SizedBox(
                                  width: 150,
                                ),
                                Text('Views all',
@@ -107,11 +107,11 @@ class Home extends StatelessWidget {
                          ],
                        ),
                      ),
-                     SizedBox(
+                     const SizedBox(
                        height: 15,
                      ),
                      Container(
-                       padding: EdgeInsets.only(left: 8),
+                       padding: const EdgeInsets.only(left: 8),
                        width: 400,
                        height: 300,
                        color: Colors.white,
@@ -123,25 +123,25 @@ class Home extends StatelessWidget {
                                Text('Categories',
                                    style:
                                    CommonMethod().themeData.textTheme.bodyText1),
-                               SizedBox(
+                               const SizedBox(
                                  width: 190,
                                ),
                                InkWell(
-                                 onTap: () => navigateTo(context, CategoriesScreen()),
+                                 onTap: () => navigateTo(context, const CategoriesScreen()),
                                  child: Text('Views all',
                                      style:
                                      CommonMethod().themeData.textTheme.headline1),
                                ),
                              ],
                            ),
-                           Container(
+                           SizedBox(
                              height: 100,
-                             child: ListView.separated(
+                             child:ListView.separated(
                                  scrollDirection: Axis.horizontal,
                                  shrinkWrap: true,
                                  itemBuilder: (context, index) =>
                                      buildContainerCate(catPhotos[index], catName[index]),
-                                 separatorBuilder: (context, index) => SizedBox(
+                                 separatorBuilder: (context, index) => const SizedBox(
                                    width: 10,
                                  ),
                                  itemCount: catPhotos.length),

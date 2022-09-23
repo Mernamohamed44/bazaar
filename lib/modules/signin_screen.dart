@@ -1,6 +1,5 @@
 import 'package:bazzar/cubit/cubit.dart';
 import 'package:bazzar/cubit/state.dart';
-import 'package:bazzar/layout/home_layout.dart';
 import 'package:bazzar/modules/signup_screen.dart';
 import 'package:bazzar/style/themes.dart';
 import 'package:flutter/material.dart';
@@ -66,11 +65,11 @@ class SignInScreen extends StatelessWidget {
                         const SizedBox(
                           height: 15,
                         ),
+                        cubit.isLoading?CircularProgressIndicator():
                         buildButton('Sign In', Colors.white, null, () {
-
                           if (cubit.formkey.currentState!.validate()) {
-                           cubit.signIn();
-                           navigateTo(context, const HomeLayout());
+                            cubit.loading();
+                            cubit.signIn(context);
                           }
                         }, 40.0, 300.0),
                         const SizedBox(

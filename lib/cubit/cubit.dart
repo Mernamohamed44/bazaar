@@ -1,4 +1,5 @@
 import 'package:bazzar/cubit/state.dart';
+import 'package:bazzar/layout/home_layout.dart';
 import 'package:bazzar/models/data_model.dart';
 import 'package:bazzar/models/users_model.dart';
 
@@ -13,6 +14,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../modules/home_screen.dart';
+import '../modules/signin_screen.dart';
+import '../shared/component/component.dart';
 
 class BazaarCubit extends Cubit<BazaarStates> {
   BazaarCubit(BuildContext context) : super(InitialState());
@@ -44,19 +47,25 @@ class BazaarCubit extends Cubit<BazaarStates> {
     currentIndex = index;
     emit(BottomNavState());
   }
-
-
-   signUp() {
+  bool isLoading=false;
+  loading(){
+    isLoading=!isLoading;
+  }
+   signUp(context) {
     FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailController.text, password: passwordController.text).then((value) => {
          createUser(value.user!.uid),
+          navigateTo(context, const SignInScreen()),
+      loading(),
         emit(SignUpState()),
     });
   }
-  signIn() {
+  signIn(context) {
     FirebaseAuth.instance.signInWithEmailAndPassword(
         email: emailController.text, password: passwordController.text).
     then((value) => {
+      loading(),
+    navigateTo(context, const HomeLayout()),
     emit(LoginState())
     });
 
@@ -94,6 +103,7 @@ class BazaarCubit extends Cubit<BazaarStates> {
       }
       return userModel;
     });
+    return null;
   }
   DataModel? model;
   void getDataCat1() {

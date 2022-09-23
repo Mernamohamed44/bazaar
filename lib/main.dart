@@ -1,3 +1,4 @@
+import 'package:bazzar/modules/splash_screen.dart';
 import 'package:bazzar/modules/welcome_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const WelcomeScreen();
+    return const SplashScreen();
   }
 }

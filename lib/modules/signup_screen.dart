@@ -4,12 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../cubit/state.dart';
-import '../layout/home_layout.dart';
 import '../style/themes.dart';
 import '../shared/component/component.dart';
 
 class SignUp extends StatelessWidget {
-  SignUp({Key? key}) : super(key: key);
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class SignUp extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: Padding(
-                          padding: const EdgeInsets.all(25.0),
+                          padding: const EdgeInsets.all(14.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -47,42 +46,38 @@ class SignUp extends StatelessWidget {
                               buildTextField(cubit.nameController, 'Full Name',
                                   Icons.person_outline),
                               const SizedBox(
-                                height: 15,
+                                height: 10,
                               ),
                               buildTextField(cubit.emailController,
                                   'Email Address', Icons.email_outlined),
                               const SizedBox(
-                                height: 15,
+                                height: 10,
                               ),
                               buildTextField(cubit.phoneController,
                                   'Phone Number', Icons.phone_outlined),
                               const SizedBox(
-                                height: 15,
+                                height: 10,
                               ),
-                              buildTextField(
-                                  cubit.passwordController,
-                                  'Password',
-                                  Icons.lock,
-                                 isPass: cubit.isPassword,
-                                 suffix:  cubit.suffix,
-                                onpress: (){
-                                  cubit.changePasswordVisibility;
-                                })
+                              buildTextField(cubit.passwordController,
+                                  'Password', Icons.lock,
+                                  isPass: cubit.isPassword,
+                                  suffix: cubit.suffix, onpress: () {
+                                cubit.changePasswordVisibility;
+                              })
                             ],
                           ),
                         ),
                       ),
                       const SizedBox(
-                        height: 15,
+                        height: 10,
                       ),
-                      buildButton('Sign up', Colors.white, null, ()
-                       {
-                        if (cubit.formkey.currentState!.validate()) {
-                           cubit.signUp();
-                             navigateTo(context, SignInScreen());
-
-                        }
-                      }, 40.0, 300.0),
+                     cubit.isLoading?CircularProgressIndicator():
+                     buildButton('Sign up', Colors.white, null, () {
+                       if (cubit.formkey.currentState!.validate()) {
+                         cubit.loading();
+                         cubit.signUp(context);
+                       }
+                     }, 40.0, 300.0),
                     ],
                   ),
                 ),

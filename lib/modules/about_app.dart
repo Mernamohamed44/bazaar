@@ -20,7 +20,7 @@ class AboutApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Bazaar is the app behind the scenes online store where people can get all essential product',style: CommonMethod().themeData.textTheme.bodyText1)
-            ,SizedBox(height: 10,),
+            ,const SizedBox(height: 10,),
             Text('Project made by : Merna Mohamed Elseady',style: CommonMethod().themeData.textTheme.bodyText1?.copyWith(
               fontSize: 13
             ))
