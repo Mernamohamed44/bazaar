@@ -13,7 +13,7 @@ class DataModel{
       }
       );
   factory DataModel.fromJson(Map<String, dynamic> json) => DataModel(
-    name: json["name"] == null ? null : json["name"],
+    name:   json["name"] == null ? null : json["name"],
     priceBefore: json["priceBefore"] == null ? null : json["priceBefore"],
     priceAfter: json["priceAfter"] == null ? null : json["priceAfter"],
     image: json["image"] == null ? null : json["image"],

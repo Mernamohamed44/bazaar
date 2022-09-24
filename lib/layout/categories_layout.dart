@@ -8,7 +8,6 @@ import '../style/themes.dart';
 
 class CategoriesScreen extends StatefulWidget {
  const CategoriesScreen({Key? key}) : super(key: key);
-
   @override
   State<CategoriesScreen> createState() => _CategoriesScreenState();
 }

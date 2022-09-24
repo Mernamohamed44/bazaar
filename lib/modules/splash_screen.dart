@@ -2,8 +2,6 @@ import 'package:bazzar/modules/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../style/themes.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -15,13 +13,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _navigateToHome();
+    _navigateToWelcome();
   }
 
-  _navigateToHome() async {
+  _navigateToWelcome() async {
     await Future.delayed(
         const Duration(
-          milliseconds: 5000,
+          milliseconds: 9000,
         ),
             () {});
     Navigator.pushReplacement(
@@ -39,13 +37,13 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 150,),
             Text('b a z a a r',
                 style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
+                    textStyle: const TextStyle(
                       color:Colors.red,
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
                     ))),
              Text('Easier Than You Think',style: GoogleFonts.poppins(
-                 textStyle: TextStyle(
+                 textStyle: const TextStyle(
                      fontSize: 20,
                    color: Colors.grey
                  )))

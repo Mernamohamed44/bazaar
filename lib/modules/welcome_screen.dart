@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
               height: 10,
             ),
             buildButton('Sign In', null, CommonMethod().themeData.primaryColor,
-                () => navigateTo(context, SignInScreen()), 40.0, 300.0)
+                () => navigateTo(context, const SignInScreen()), 40.0, 300.0)
           ],
         ),
       ),
